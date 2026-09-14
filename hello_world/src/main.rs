@@ -1,3 +1,6 @@
 fn main() {
-    println!("Hello, rust");
+    let mut name="DUDE";
+    println!("Hello, rust {name}");
+    name="Hector";
+    println!("Hello, rust {name}");
 }
