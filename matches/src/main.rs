@@ -29,6 +29,10 @@ fn main() {
       price:500_000
   };
 
+  let (x,y)=(10,20);
+
   println!("{}",lambo.model);
+  println!("{}",x);
+
 
 }
