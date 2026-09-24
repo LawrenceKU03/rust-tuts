@@ -4,6 +4,13 @@ enum Matches{
     France
 }
 
+
+struct Car{
+    model:String,
+    engine:String,
+    price:i32
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -13,8 +20,15 @@ fn main() {
         Matches::Chelsea => println!("Chelsea"),
         Matches::ManUnited => println!("ManUnited"),
         Matches::France => println!("France"),
-    }
+    };
 
+    
+  let lambo=Car {
+      model:"Lamb".to_string(),
+      engine:"V8".to_string(),
+      price:500_000
+  };
 
+  println!("{}",lambo.model);
 
 }
