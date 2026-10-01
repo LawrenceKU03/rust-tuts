@@ -4,9 +4,9 @@ enum Light {
 }
 
 
-struct Book{
-    title:&str;
-    desc:&str;
+struct Book<'a> {
+    title: &'a str,
+    desc: &'a str,
 }
 
 fn print_light_state(light: &Light) {
@@ -16,9 +16,9 @@ fn print_light_state(light: &Light) {
     }
 }
 
-fn display_book(book:Book){
-    println!("Title:{book.title}");
-    println!("Title:{book.title}");
+fn display_book(book: &Book){
+    println!("Title: {}", book.title);
+    println!("Desc: {}", book.desc);
 }
 
 fn main() {
@@ -28,11 +28,11 @@ fn main() {
     print_light_state(&dull_light);
     print_light_state(&bright_light);
 
-    let book={
-        title:"This is my book",
-        desc:"This is my book"
+    let book = Book {
+        title: "This is my book",
+        desc: "This is my book",
     };
 
-    display_book(book)
-
+    display_book(&book);
+ display_book(&book);
 }
