@@ -19,6 +19,13 @@ fn print_light_state(light: &Light) {
 }
 }
 
+
+impl <'a>Book<'a>{
+    fn print_title(&self){
+        println!("{}",self.title);
+    }
+}
+
 fn display_book(book: &Book){
     println!("Title: {}", book.title);
     println!("Desc: {}", book.desc);
@@ -33,9 +40,8 @@ fn main() {
 
     let book = Book {
         title: "This is my book",
-        desc: "This is my book",
+        desc: "This is my bookeee",
     };
 
-    display_book(&book);
- display_book(&book);
+    book.print_title();
 }
